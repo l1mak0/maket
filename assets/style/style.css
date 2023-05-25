@@ -13,7 +13,7 @@
     align-items: center;
 }
 .logo{
-    font-family: "LM_medium", sans-serif;
+    font-family: "LM_bold", sans-serif;
     font-size: 24px;
 }
 .navigation{
@@ -22,4 +22,215 @@
     color: #5C5555;
     font-weight: 400;
     text-decoration: none;
+}
+.logo img{
+    margin-right: 7px;
+}
+nav a:not(:last-child){
+    margin-right: 76px;
+}
+nav .active,
+.navigation:hover{
+    color: #FF5202;
+}
+.btn{
+    font-family: "Ns_bold", "sans-serif";
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #1A1A1A;
+    padding: 18px 46px 19px;
+    border: 1px solid #1A1A1A;
+    transition: background .3s linear;
+}
+.container .btn:hover,
+.buttons .btn:first-child{
+    border: 1px solid #FF5202;
+    background: #FF5202;
+    color: white;
+}
+.mobile{
+    display: none;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.welcome_block .container{
+    display: grid;
+    grid-template-areas: "text img"
+                        "btn img";
+}
+.w_text{
+    display: block;
+    grid-area: text;
+}
+.buttons{
+    grid-area: btn;
+}
+.w_img{
+    grid-area: img;
+    margin-top: 77px;
+}
+.w_text .title{
+    font-family: "LM_medium", sans-serif;
+    font-size: 62px;
+    font-weight: 500;
+    color: #1A1A1A;
+    width: 640px;
+    margin-top: 145px;
+}
+.w_text .description{
+    font-family: "Ns_light", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: #1A1A1A;
+    width: 468px;
+    padding: 16px;
+    border-left: 1px solid #1A1A1A;
+    margin: 40px 0;
+}
+footer{
+    background: #262543;
+    color: white;
+    height: 330px;
+    margin-top: 120px;
+}
+footer .container {
+    width: 1200px;
+    height: 330px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.f_title .title{
+    font-family: "LM_regular", sans-serif;
+    font-size: 40px;
+    width: 299px;
+    margin-bottom: 33px;
+}
+.f_title .description{
+    font-size: 20px;
+    font-family: "Ns_light", sans-serif;
+    width: 336px;
+    font-weight: 300;
+    letter-spacing: 0.016em;
+    font-style: normal;
+}
+.f_expert img,
+.f_oline img,
+.f_support img{
+    width: 58px;
+    height: 58px;
+    background: #1CD7AF;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 34px;
+}
+.f_oline img{
+    background: #FC5B11;
+}
+.f_support img{
+    background: #525BF1;
+}
+.f_title{
+    font-family: "LM_regular", sans-serif;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.f_desc{
+    font-family: "Ns_light", sans-serif;
+    font-size: 16px;
+    width: 190px;
+}
+
+
+
+@media screen and (max-width: 375px) {
+    .dekstop{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 24px;
+    }
+    .mobile_logo img{
+        width: 22px;
+        height: 16px;
+        margin-right: 5px;
+    }
+    .mobile_logo{
+        font-family: "LM_medium", sans-serif;
+        font-weight: 500;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+    }
+    .welcome_block .container{
+        grid-template-areas: "text"
+                            "img"
+                            "btn";
+        grid-template-columns: 1fr 320px 56px;
+        width: 375px;
+    }
+    .w_text{
+        width: max-content;
+    }
+    .w_text .title{
+        font-size: 30px;
+        margin: 24px;
+        width: 309px;
+    }
+    .w_text .description{
+        font-size: 14px;
+        margin: 24px;
+        width: 273px;
+    }
+    .w_img{
+        width: max-content;
+        height: max-content;
+        margin-top: 0;
+    }
+    .w_img img{
+        width: 320px;
+        margin: 28px;
+    }
+    .buttons{
+        margin: 24px;
+        display: flex;
+        justify-content: space-between;
+        width: 327px;
+    }
+    .buttons .btn{
+        width: 152px;
+        height: 56px;
+        display: block;
+        font-size: 15px;
+        padding: 17px 33px;
+    }
+    footer{
+        height: 975px;
+    }
+    footer .container{
+        flex-direction: column;
+        width: max-content;
+        text-align: center;
+    }
+    .f_title .title{
+        text-align: center;
+        margin: 64px auto 24px;
+        width: 206px;
+        font-size: 26px;
+    }
+    .f_title .description{
+        font-size: 15px;
+        margin-bottom: 57px;
+    }
+    .f_expert,
+    .f_oline{
+        margin-bottom: 48px;
+    }
 }
